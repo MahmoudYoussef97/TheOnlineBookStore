@@ -13,7 +13,7 @@ namespace TheOnlineBookStore.Models
         [Required, MaxLength(60)]
         public string Title { get; set; }
         [Required]
-        public double Price { get; set; }
+        public double Price { get; set; } = 0;
         [Required, MaxLength(700)]
         public string Description { get; set; }
         public Category Category { get; set; }
@@ -24,5 +24,9 @@ namespace TheOnlineBookStore.Models
         public string Publisher { get; set; }
         [Required]
         public int Quantity { get; set; }
+        [Required]
+        public byte[] Image { get; set; }
+        [Required]
+        public bool IsFree { get; set; }
     }
 }

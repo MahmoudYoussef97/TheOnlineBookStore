@@ -12,6 +12,7 @@ using TheOnlineBookStore.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TheOnlineBookStore.Services;
 
 namespace TheOnlineBookStore
 {
@@ -32,6 +33,8 @@ namespace TheOnlineBookStore
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

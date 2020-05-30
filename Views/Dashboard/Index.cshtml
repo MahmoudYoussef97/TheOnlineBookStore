@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <section>
+        <div class="container-fluid">
+
+            <div class="row">
+                <div style="border-right: 2px solid #ffc107;" class="col-md-2 m-auto text-center pt-2">
+                    <h4 class="text-white">Control Panel</h4>
+                        <div class="m-auto">
+                            <a class="btn btn-outline-warning my-2" asp-area="" asp-controller="BooksManagement" asp-action="index">Books Management</a>
+                        </div>
+                        <div class=""m-auto">
+                            <a class="btn btn-outline-warning my-2" asp-area="" asp-controller="CategoriesManagement" asp-action="index">Categories Management</a>
+                        </div>
+                        <div class=""m-auto">
+                            <a class="btn btn-outline-warning my-2" asp-area="" asp-controller="AuthorsManagement" asp-action="index">Authors Management</a>
+                        </div>
+                </div>
+                <div class="col-md-10 text-center pt-5">
+                    <h1 class="text-white">Welcome to the Admin Dashboard</h1>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
